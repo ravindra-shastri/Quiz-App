@@ -1,7 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
-
 export default class ResultCard extends React.Component {
   constructor(props) {
     super(props);

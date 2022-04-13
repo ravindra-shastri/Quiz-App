@@ -100,10 +100,13 @@ export default class QuizPage extends React.Component {
                 {this.state.answers.map((answer, i) => {
                   return (
                     <li
-                      className={this.activeAns(answer) ? 'active-answer answer-opt' : 'answer-opt'}
+                      className={this.activeAns(answer) ?
+                        'active-answer answer-opt' : 'answer-opt'}
                       onClick={(event) => { this.selectAnswer(answer) }}
                     >
-                      <span key={i} className={this.state.answers[this.state.currentQuestion] === answer ? answer : ""}>
+                      <span key={i} className=
+                        {this.state.answers[this.state.currentQuestion] ===
+                          answer ? answer : ""}>
                         {i + 1} .  {"     " + answer}
                       </span>
                     </li>
@@ -117,15 +120,19 @@ export default class QuizPage extends React.Component {
 
           {this.state.currentQuestion > 8 ? (
             <div className="submit-btn-container">
-              <button className="submit-btn" onClick={() => {
-                this.handleSubmit(this.state.answers);
-              }}>
+              <button
+                className="submit-btn"
+                onClick={() => {
+                  this.handleSubmit(this.state.answers);
+                }}>
                 Submit
               </button>
             </div>
           ) : (
             <div className="next-btn-container">
-              <button className="next-btn" onClick={(event) => { this.next() }}>
+              <button
+                className="next-btn"
+                onClick={(event) => { this.next() }}>
                 Next
               </button>
             </div>

@@ -23,13 +23,16 @@ export default class Catogaries extends React.Component {
         {
           this.state.categories ? (
             <div>
-              <h2 className="category-title"> Select Category </h2>
+              <h2 className="category-title">
+                Select Category
+              </h2>
               <div className="category-container">
-
                 <div className="category">
                   {this.state.categories.map((category) => {
                     return (
-                      <button className="category-btn" onClick={(event) => { this.props.addCategory(event, category) }} key={category.id}>
+                      <button
+                        className="category-btn"
+                        onClick={(event) => { this.props.addCategory(event, category) }} key={category.id}>
                         {category.name}
                       </button>
                     )
